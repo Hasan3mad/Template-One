@@ -313,11 +313,23 @@ body{
   flex-wrap: wrap;
 
 }
+@media (max-width:991px) {
+  .about .about-content{
+  flex-direction: column;
+  text-align: center;
+}
+}
 .about .about-content .image{
   position: relative;
   width: 260px;
   height: 100%;
+  
 
+}
+@media (max-width:991px) {
+  .about .about-content .image{
+    margin: 0 auto 20px;
+    }
 }
 .about .about-content .image::before{
   content: "";
@@ -341,6 +353,13 @@ body{
   right: -120px;
   z-index: -1;
 }
+@media (max-width:991px) {
+  .about .about-content .image::before,
+  .about .about-content .image::after{
+      display: none;
+  }
+}
+
 .about .about-content .image img{
   max-width: 100%;
 }
@@ -360,8 +379,82 @@ body{
   border-color: var(--main-color);
 
 }
+
+
 .about .about-content .text p:last-of-type{
   line-height: 2;
   color: #777;
 }
 /* End About */
+/* Start Contact */
+.contact{
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.contact .info{
+  margin-top: var(--section-padding);
+  margin-bottom: var(--section-padding);
+}
+.contact .info .label{
+  font-size: 45px;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 0px;
+}
+.contact .info .link{
+  font-size: 35px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--main-color);
+  display: inline-block;
+  margin-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.contact .info .social{
+ margin-top: 50px;
+ margin-left: 70px;
+ color: #2c4755;
+}
+.contact .info .social a{
+  margin-left: 10px;
+  font-size: 20px;
+  color: #222;
+}
+@media(max-width:767px){
+  .contact .info{
+  
+  text-align: center;
+}
+  .contact .info .label{
+  font-size: 20px;
+}
+.contact .info .link{
+  font-size: 15px;
+  margin-left: 0;
+}
+.contact .info .social{
+ font-size: 10px;
+ margin-top: 20px;
+ margin-left: 0;
+ 
+}
+}
+/* End Contact */
+
+/* Start Footer */
+.footer{
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--secondary-color);
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+.footer span{
+  font-weight: 700;
+  color: rgb(57, 169, 248);
+}
+
+/* End Footer */
